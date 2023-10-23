@@ -1,1 +1,2 @@
 Hi ha un fitxer nou anomenat "llistar.php" que es fa servir per l'exercici 5, també s'ha fet administrador a l'usuari 1 per a poder provar la funcionalitat
+Per a l'exercici 6 s'han creat uns fitxers anomenats baixa.php, baixaDefinitiva.php i baixa.view.php
