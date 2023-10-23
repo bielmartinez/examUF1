@@ -32,12 +32,21 @@ function startSessionByUserId($userId)
     session_start();
     $_SESSION["userId"] = $userId;
 }
-
+/*
 function setSessionLifeTime()
 {    
     ini_set('session.gc_maxlifetime', 1800);
     ini_set('session.cookie-lifetime', 1800);
 }
+*/
+//Ex9
+function setSessionLifeTime()
+{    
+    ini_set('session.gc_maxlifetime', 900);
+    ini_set('session.cookie-lifetime', 900);
+}
+
+
 
 /**
  * Tenca la sessió de l'usuari, elimina la cookie de rememberme i redirigeix a l'inici

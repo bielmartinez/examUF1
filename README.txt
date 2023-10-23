@@ -1,0 +1,1 @@
+Hi ha un fitxer nou anomenat "llistar.php" que es fa servir per l'exercici 5, també s'ha fet administrador a l'usuari 1 per a poder provar la funcionalitat

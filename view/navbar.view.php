@@ -39,10 +39,11 @@
                 <li><a class="dropdown-item " href="recovery-password.php"><span class="icon-key"></span> Recovery password</a></li>
                 <div class="dropdown-divider"></div>
                 <li><a class="dropdown-item" href="clear-session.php"><span class="icon-logout"></span> Log out</a></li>
-                <li><a class="dropdown-item" href="clear-llistar.php"><span class="icon-logout"></span> Llistar usuaris</a></li>
-
+                <li><a class="dropdown-item" href="llistar.php"><span></span> Llistar usuaris</a></li>
+                <li><a class="dropdown-item" href="baixa.php"> Donar-se de baixa</a></li>
                 STR;
-                //L
+                //Ex 5: La linea 42 s'ha afegit
+                //Ex 6: La linea 43 s'ha afegit
           ?>
       </ul>
       </li>
