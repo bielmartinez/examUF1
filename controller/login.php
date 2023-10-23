@@ -62,11 +62,20 @@ function checkUserInput($email, $password)
         $errors['email'] = "This user email doesn't exist.";
         return;
     }
-
+/* Ex 11
     $md5Hash = md5($password);
     $md5HashDB = getUserHash($email);
 
     if ($md5Hash != $md5HashDB) {
+        $errors['password'] = "Wrong password.";
+        return;
+    }
+}
+*/
+    $SHA256 = hash('SHA256', $password);
+    $SHA256DB = getUserHash($email);
+
+    if ($SHA256 != $SHA256DB) {
         $errors['password'] = "Wrong password.";
         return;
     }

@@ -191,6 +191,7 @@ function getUserIdByRememberMeToken($rememberMeToken)
  * @param string $md5Hash hash MD5 del password del nou usuari
  * 
  */
+/* Ex11
 function insertNewUser($email, $nickname, $md5Hash)
 {
     try {
@@ -200,6 +201,21 @@ function insertNewUser($email, $nickname, $md5Hash)
             'email' => $email,
             'nickname' => $nickname,
             'pass' => $md5Hash
+        ]);
+    } catch (PDOException $e) {
+        die("No es pot establir connexió amb la base de dades");
+    }
+}
+*/
+function insertNewUser($email, $nickname, $SHA256)
+{
+    try {
+        $connexio = getConnection();
+        $statement = $connexio->prepare('INSERT INTO users (email, nickname, password) VALUES (:email, :nickname, :pass)');
+        $statement->execute([
+            'email' => $email,
+            'nickname' => $nickname,
+            'pass' => $SHA256
         ]);
     } catch (PDOException $e) {
         die("No es pot establir connexió amb la base de dades");
@@ -240,6 +256,7 @@ function insertNewSocialUser($email, $nickname, $socialProvider)
  * @param mixed $md5Hash hash del password
  * 
  */
+/*Ex 11
 function setUserHash($userId, $md5Hash)
 {
     try {
@@ -248,6 +265,22 @@ function setUserHash($userId, $md5Hash)
         $statement = $connexio->prepare('UPDATE users SET password = :md5Hash WHERE id = :userId');
 
         $statement->bindParam('md5Hash', $md5Hash);
+        $statement->bindParam('userId', $userId, PDO::PARAM_INT);
+
+        $statement->execute();
+    } catch (PDOException $e) {
+        die("No es pot establir connexió amb la base de dades");
+    }
+}
+*/
+function setUserHash($userId, $SHA256)
+{
+    try {
+        $connexio = getConnection();
+
+        $statement = $connexio->prepare('UPDATE users SET password = :SHA256 WHERE id = :userId');
+
+        $statement->bindParam('SHA256', $SHA256);
         $statement->bindParam('userId', $userId, PDO::PARAM_INT);
 
         $statement->execute();
