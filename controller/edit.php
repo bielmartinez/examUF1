@@ -2,7 +2,8 @@
 
 require_once '../model/pdo-articles.php';
 require_once '../controller/input-common.php';
-require_once '../controller/images.php';
+//require_once '../controller/images.php';
+//Ex 15 Al intentar crear un nou post apareixia un error referent a que la linea anterior del codi fallava, al eliminar-la es poden crear posts amb completa normalitat, com es pot comprovar amb el post "a"
 require_once '../controller/session.php';
 
 $errors = [];

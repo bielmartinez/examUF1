@@ -29,6 +29,8 @@
                 <li><a class="dropdown-item $signupActive" href="sign-up.php"><span class="icon-user-plus"></span> Sign up</a></li>
             STR;
 
+
+
           else echo <<<STR
                 <a class="nav-link dropdown-toggle $createActive $passwordActive" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill me-2"></i><span class="icon-user-o"></span> $nickname</a>
                 <ul class="dropdown-menu dropdown-menu-end">
@@ -37,8 +39,10 @@
                 <li><a class="dropdown-item " href="recovery-password.php"><span class="icon-key"></span> Recovery password</a></li>
                 <div class="dropdown-divider"></div>
                 <li><a class="dropdown-item" href="clear-session.php"><span class="icon-logout"></span> Log out</a></li>
-                STR;
+                <li><a class="dropdown-item" href="clear-llistar.php"><span class="icon-logout"></span> Llistar usuaris</a></li>
 
+                STR;
+                //L
           ?>
       </ul>
       </li>
